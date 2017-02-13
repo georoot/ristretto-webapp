@@ -1,5 +1,6 @@
 .container(ng-controller="authCtrl" ng-show="auth==false")
-  form(ng-submit="signup()")
+  form.r-Form(ng-submit="signup()")
+    h2 Signup
     .success(ng-show="message!=null" ng-bind='message')
     .error(ng-show="error!=null" ng-bind='error')
     input(type='Text' placeholder='Username' ng-model='form.username')
