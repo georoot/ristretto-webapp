@@ -1,4 +1,9 @@
-.container(ng-controller="userCtrl")
-  h1(ng-bind="user.username")
-  p Role :
-  p(ng-bind="user.role")
+.container.settings(ng-controller="userCtrl")
+  h1 SSH Keys
+  form.r-Form(ng-submit="addKey()")
+    h2 Add new
+    input(type=text placeholder="Title" ng-model="form.title")
+    textarea(placeholder="Public keys" ng-model="form.value")
+    button Add key
+  .segment
+    h2 Existing key pair
