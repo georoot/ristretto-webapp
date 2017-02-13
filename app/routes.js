@@ -9,6 +9,9 @@ module.exports = function(app) {
       })
       .when("/new",{
         templateUrl: "/templates/newRepo.html"
+      })
+      .when("/:user/:repo",{
+        templateUrl: "/templates/repo.html"
       });
 
     $locationProvider.html5Mode(true);
