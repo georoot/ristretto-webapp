@@ -1,5 +1,8 @@
-nav
-  a.brand Logo
-  ul
+nav(ng-controller="authCtrl")
+  a.brand(href="/") Ristretto
+  ul(ng-show="auth==false")
     li
       a(ng-href="/login") Login
+  ul(ng-show="auth==true")
+    li
+      a(nohref ng-click="logout()") Logout

@@ -1,5 +1,7 @@
-.container
-  form
-    input(type='email' placeholder='Email' ng-model='form.email')
+.container(ng-controller="authCtrl" ng-show="auth==false")
+  form(ng-submit="signup()")
+    .success(ng-show="message!=null" ng-bind='message')
+    .error(ng-show="error!=null" ng-bind='error')
+    input(type='Text' placeholder='Username' ng-model='form.username')
     input(type='password' placeholder='Password' ng-model='form.password')
     button Signup

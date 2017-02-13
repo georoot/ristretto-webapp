@@ -1,0 +1,5 @@
+.container(ng-controller="authCtrl")
+  form(ng-submit="login()")
+    input(type="text" placeholder="Username" ng-model="form.username")
+    input(type="password" placeholder="Password" ng-model="form.password")
+    button Login

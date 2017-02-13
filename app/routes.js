@@ -3,6 +3,9 @@ module.exports = function(app) {
     $routeProvider
       .when("/",{
         templateUrl: "/templates/application.html"
+      })
+      .when("/login",{
+        templateUrl: "/templates/login.html"
       });
 
     $locationProvider.html5Mode(true);
