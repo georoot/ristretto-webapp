@@ -1,0 +1,4 @@
+.container(ng-controller="repoCtrl" ng-init="list()")
+   ul
+     li(ng-repeat="repo in repoList")
+       a(href="/{{repo.owner}}/{{repo.title}}" ng-bind="repo.title")

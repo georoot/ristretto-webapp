@@ -2,8 +2,6 @@ module.exports = ($scope,$rootScope,$localStorage,Restangular)=>{
   $scope.token = $localStorage.token;
 
   $scope.createRepo = ()=>{
-    console.log($scope.form);
-    console.log($scope.token);
     Restangular
       .all("repo")
       .customPOST($scope.form,undefined,undefined,{Authorization: $scope.token})
@@ -11,7 +9,19 @@ module.exports = ($scope,$rootScope,$localStorage,Restangular)=>{
         console.log(data);
       })
       .catch((err)=>{
-        console.log(err);
+        $scope.error = "Error while initializing repo";
+      });
+  }
+
+  $scope.list = ()=>{
+    Restangular
+      .all("repo")
+      .getList(undefined,{Authorization: $scope.token})
+      .then((data)=>{
+        $scope.repoList = data;
+      })
+      .catch((err)=>{
+        $scope.error = "Error while fetching repo";
       });
   }
 };
