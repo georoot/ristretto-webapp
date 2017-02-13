@@ -21,7 +21,7 @@ module.exports = ($scope,$rootScope,$routeParams,$localStorage,Restangular)=>{
       .getList()
       .then((config)=>{
         config = config[0];
-        $scope.cloneUrl = "git clone ssh://git@"+config.host+"/"+$routeParams.user+"/"+$routeParams.repo+".git";
+        $scope.cloneUrl = "git clone ssh://git@"+config.host+":"+config.port+"/"+$routeParams.user+"/"+$routeParams.repo+".git";
         console.log($scope.cloneUrl);
       })
       .catch((err)=>{
