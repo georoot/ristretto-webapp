@@ -5,4 +5,6 @@ nav(ng-controller="authCtrl")
       a(ng-href="/login") Login
   ul(ng-show="auth==true")
     li
+      a(href="/new") New repository
+    li
       a(nohref ng-click="logout()") Logout

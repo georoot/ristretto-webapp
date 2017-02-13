@@ -1,0 +1,6 @@
+.container(ng-controller="repoCtrl")
+  form(ng-submit="createRepo()")
+    input(type="text" placeholder="Repository name" ng-model="form.title")
+    input(type="checkbox")
+    small Private ?
+    button Create Repository
