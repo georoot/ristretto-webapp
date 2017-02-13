@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+.dashboard {
+  h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    margin-left: 0px;
+    padding-left: 0px;
+    font-weight: normal;
+  }
+  margin-top: 40px;
+  ul {
+    margin:0px;
+    padding: 0px;
+  }
+  li {
+    display: block;
+    margin-top: 30px;
+    a{
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 23px;
+      color: rgba(150,80,80,.7);
+      margin-top: 30px;
+      border-bottom: 1px dotted;
+    }
+    a:hover {
+      color: rgba(150,80,80,.9);
+    }
+  }
+}

@@ -1,6 +1,6 @@
-.container(ng-controller="authCtrl" ng-show="auth==true")
+.container.dashboard(ng-controller="authCtrl" ng-show="auth==true")
   .row(ng-controller="repoCtrl" ng-init="list()")
-     h2 You repositories
+     h2 My repositories
      ul
        li(ng-repeat="repo in repoList")
          a(href="/{{repo.owner}}/{{repo.title}}" ng-bind="repo.title")

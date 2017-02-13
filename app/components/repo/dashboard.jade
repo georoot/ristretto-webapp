@@ -1,3 +1,10 @@
-.container(ng-controller="repoCtrl" ng-init="getRepo()")
+.container.repo-view(ng-controller="repoCtrl" ng-init="getRepo()")
   h1(ng-bind="params.repo")
-  code(ng-bind="cloneUrl")
+  h2 Getting started
+  .code
+    p(ng-bind="cloneUrl")
+    p cd {{params.repo}}
+    p echo "# {{params.repo}}" >> README.md
+    p git add README.md
+    p git commit -m "Initial commit"
+    p git push
