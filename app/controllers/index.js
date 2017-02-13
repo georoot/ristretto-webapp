@@ -3,3 +3,4 @@ var app = angular.module('application');
 
 app.controller("authCtrl",require('./auth'));
 app.controller("repoCtrl",require('./repo'));
+app.controller("userCtrl",require('./user'));

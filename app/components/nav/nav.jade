@@ -1,10 +1,13 @@
 nav(ng-controller="authCtrl")
-  a.brand(href="/") Ristretto
-  ul(ng-show="auth==false")
-    li
-      a(ng-href="/login") Login
-  ul(ng-show="auth==true")
-    li
-      a(href="/new") New repository
-    li
-      a(nohref ng-click="logout()") Logout
+  .container
+    a.brand(href="/") Ristretto
+    ul(ng-show="auth==false")
+      li
+        a(ng-href="/login") Login
+    ul(ng-show="auth==true")
+      li
+        a(href="/new") New repository
+      li
+        a(href="/settings") Settings
+      li
+        a(nohref ng-click="logout()") Logout

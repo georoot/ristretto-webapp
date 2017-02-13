@@ -10,6 +10,9 @@ module.exports = function(app) {
       .when("/new",{
         templateUrl: "/templates/newRepo.html"
       })
+      .when("/settings",{
+        templateUrl: "/templates/settings.html"
+      })
       .when("/:user/:repo",{
         templateUrl: "/templates/repo.html"
       });
