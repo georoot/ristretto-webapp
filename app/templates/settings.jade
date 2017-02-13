@@ -7,3 +7,8 @@
     button Add key
   .segment
     h2 Existing key pair
+    .key(ng-repeat="key in users.keys")
+      b(ng-bind="key.title")
+      br
+      br
+      .value(ng-bind="key.value")
